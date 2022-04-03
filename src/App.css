@@ -24,6 +24,9 @@
 
 .toast-buttons {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: auto;
 }
 
 .toast-buttons button {

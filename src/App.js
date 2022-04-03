@@ -145,7 +145,7 @@ const App = () => {
         <Toast 
           toastList={list}
           position={position}
-          autoDelete={true}
+          // autoDelete={true}
           autoDeleteTime={3000}
         />
 
