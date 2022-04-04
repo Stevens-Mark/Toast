@@ -9,6 +9,8 @@ import checkIcon from './assets/check.svg'
 import errorIcon from './assets/error.svg'
 import infoIcon from './assets/info.svg'
 import warningIcon from './assets/warning.svg'
+import { toastTheme } from './styles/theme'
+
 
 // style list for buttons
 const BUTTON_PROPS = [
@@ -42,20 +44,9 @@ const BUTTON_PROPS = [
 const App = () => {
 
   const [list, setList] = useState([])
-  const [position, setPosition] = useState()
 
   /**
-   * update the toast position based on the option selected by the user
-   * @function selectPosition
-   * @param {string} the position className to be passed to toast component
-   */
-  const selectPosition = ( event ) => {
-    setPosition(event.target.value)
-    setList([])
-  }
-
-  /**
-   * set the toast type  to show based on the button clicked
+   * set the toast type to show based on the button clicked
    * @function showToast
    * @param {string} type (warning, info etc..)
    */
@@ -126,27 +117,9 @@ const App = () => {
           )}
         </div>
 
-        <div className="select">
-          <select
-            defaultValue="default"
-            name="position"
-            value={position}
-            onChange={selectPosition}
-            className="position-select"
-            >
-            <option value="default" disabled >Select Position</option>
-            <option value="top-right">Top Right</option>
-            <option value="top-left">Top Left</option>
-            <option value="bottom-left">Bottom Left</option>
-            <option value="bottom-right">Bottom Right</option>
-          </select>
-        </div>
-
         <Toast 
           toastList={list}
-          position={position}
-          // autoDelete={true}
-          autoDeleteTime={3000}
+          theme={toastTheme}
         />
 
       </div>

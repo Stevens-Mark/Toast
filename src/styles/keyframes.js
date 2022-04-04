@@ -1,7 +1,7 @@
 import { keyframes } from 'styled-components'
 
 /**
- * fadein toast-in-right
+ * fadeins left or right for toast notification
  */
  export const toastInRight = keyframes`
  from { transform: translateX(100%); }

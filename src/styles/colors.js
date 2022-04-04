@@ -4,7 +4,10 @@ const colors = {
     danger: '#d9534f',
     info: '#5bc0de',
     warning: '#f0ad4e',
-    blanc: '#fff',
+
+    primary: '#fff',
+    secondary: '#000',
+    // tertiary: '',
 }
  
 export default colors
